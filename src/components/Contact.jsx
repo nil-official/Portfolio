@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiSend } from 'react-icons/fi'
 import { EMAIL, LOCATION } from '@/constants/personal'
 import { FACEBOOK, GITHUB, INSTAGRAM, LINKEDIN } from '@/constants/social'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -22,34 +23,54 @@ export default function Contact() {
             ...formData,
             [e.target.name]: e.target.value,
         })
-    }
+    };
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        setIsSubmitting(true)
+        e.preventDefault();
+        setIsSubmitting(true);
 
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false)
-            setSubmitMessage({
-                type: 'success',
-                text: 'Your message has been sent successfully!',
+        emailjs
+            .send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                {
+                    to_email: EMAIL,
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                },
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+            )
+            .then(() => {
+                setIsSubmitting(false);
+                setSubmitMessage({
+                    type: 'success',
+                    text: 'Your message has been sent successfully!',
+                });
+
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                });
+
+                // Clear message after 5 seconds
+                setTimeout(() => {
+                    setSubmitMessage(null);
+                }, 5000);
             })
-
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: '',
-            })
-
-            // Clear message after 5 seconds
-            setTimeout(() => {
-                setSubmitMessage(null)
-            }, 5000)
-        }, 1500)
-    }
+            .catch((error) => {
+                setIsSubmitting(false);
+                setSubmitMessage({
+                    type: 'error',
+                    text: 'Oops! Something went wrong. Please try again.',
+                });
+                console.error('EmailJS Error:', error);
+            });
+    };
 
     return (
         <section id="contact" className="py-20">
