@@ -31,15 +31,15 @@ export default function Skills() {
     }, [])
 
     const skills = [
-        { name: 'Java', percentage: 80 },
-        { name: 'JavaScript', percentage: 65 },
-        { name: 'Python', percentage: 70 },
-        { name: 'SpringBoot', percentage: 70 },
-        { name: 'React.js', percentage: 75 },
-        { name: 'Next.js', percentage: 60 },
-        { name: 'Express.js', percentage: 65 },
-        { name: 'Tailwind CSS', percentage: 80 },
-        { name: 'MongoDB', percentage: 65 },
+        { name: 'Java', percentage: 70 },
+        { name: 'JavaScript', percentage: 60 },
+        { name: 'Python', percentage: 65 },
+        { name: 'SpringBoot', percentage: 65 },
+        { name: 'React.js', percentage: 60 },
+        { name: 'Next.js', percentage: 55 },
+        { name: 'Express.js', percentage: 60 },
+        { name: 'Tailwind CSS', percentage: 75 },
+        { name: 'MongoDB', percentage: 60 },
         { name: 'PostgreSQL', percentage: 70 },
     ]
 

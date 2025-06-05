@@ -63,7 +63,7 @@ export default function About() {
                             </div>
                             <div>
                                 <p className="font-medium mb-1">Email:</p>
-                                <p className="text-gray-400">{EMAIL}</p>
+                                <a href={`mailto:${EMAIL}`} className="text-gray-400 hover:text-white">{EMAIL}</a>
                             </div>
                             <div>
                                 <p className="font-medium mb-1">Location:</p>

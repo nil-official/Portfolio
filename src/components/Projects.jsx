@@ -79,7 +79,7 @@ export default function Projects() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
                                 <button
                                     onClick={() => setActiveProject(project)}
-                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                                 >
                                     <FiMaximize2 className="w-5 h-5" />
                                 </button>
@@ -122,18 +122,18 @@ export default function Projects() {
                 {activeProject && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
                         <div
-                            className="absolute inset-0 bg-black bg-opacity-75"
+                            className="absolute inset-0 bg-black bg-opacity-60"
                             onClick={() => setActiveProject(null)}
                         ></div>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="relative bg-gray-900 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10 border border-gray-700"
+                            className="relative bg-gray-900 rounded-xl p-10 max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10 border border-gray-700"
                         >
                             <button
                                 onClick={() => setActiveProject(null)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+                                className="absolute top-4 right-4 text-gray-400 hover:text-white cursor-pointer"
                             >
                                 <FiX className="w-6 h-6" />
                             </button>
