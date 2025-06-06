@@ -34,8 +34,8 @@ export const projects = [
         image: '/learnify.png',
         tech: ['React', 'Tailwind CSS'],
         description: 'A responsive landing page for an online learning platform, showcasing courses, testimonials, and a user-friendly interface.',
-        githubLink: 'https://github.com/nil-official/SCT_WD_1/',
-        demoLink: 'https://nil-official.github.io/SCT_WD_1/',
+        githubLink: 'https://github.com/nil-official/Learnify/',
+        demoLink: 'https://nil-official.github.io/Learnify/',
     },
     {
         id: 5,
@@ -44,8 +44,8 @@ export const projects = [
         image: '/todo.png',
         tech: ['React', 'Tailwind CSS'],
         description: 'A simple and intuitive to-do list application that allows users to manage tasks efficiently. It features task creation, editing, and deletion functionalities.',
-        githubLink: 'https://github.com/nil-official/SCT_WD_4/',
-        demoLink: 'https://nil-official.github.io/SCT_WD_4/',
+        githubLink: 'https://github.com/nil-official/To-Do-List/',
+        demoLink: 'https://nil-official.github.io/To-Do-List/',
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ export const projects = [
         category: 'fullstack',
         tech: ['JSP', 'Servlet', 'OracleDB', 'HTML', 'CSS'],
         description: 'An OTT platform enabling user authentication, video streaming, and content management with a dynamic front-end and database integration.',
-        githubLink: 'https://github.com/nil-official/palette/',
+        githubLink: 'https://github.com/nil-official/Palette/',
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ export const projects = [
         image: '/tictactoe.png',
         tech: ['React', 'Tailwind CSS'],
         description: 'A classic Tic Tac Toe game built with React, featuring a user-friendly interface and real-time gameplay.',
-        githubLink: 'https://github.com/nil-official/SCT_WD_3/',
-        demoLink: 'https://nil-official.github.io/SCT_WD_3/',
+        githubLink: 'https://github.com/nil-official/Tic-Tac-Toe/',
+        demoLink: 'https://nil-official.github.io/Tic-Tac-Toe/',
     }
 ]
