@@ -1,7 +1,11 @@
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+})
 
 export const metadata = {
   title: 'Niladri Chakraborty | Full Stack Engineer',
@@ -11,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-900 text-gray-100`}>
+      <body className={`${poppins.className} bg-gray-900 text-gray-100`}>
         {children}
       </body>
     </html>
