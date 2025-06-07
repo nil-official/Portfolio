@@ -1,12 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 
 export default function Hero() {
     return (
-        <section id="hero" className="min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+        <section id="hero" className="min-h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-black opacity-80"></div>
                 <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>

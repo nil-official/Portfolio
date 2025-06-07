@@ -186,56 +186,58 @@ export default function Contact() {
                         </form>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-                            <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+                    <div className="relative overflow-x-hidden">
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+                                <h3 className="text-xl font-bold mb-6">Contact Information</h3>
 
-                            <div className="space-y-6">
-                                <div className="flex items-start">
-                                    <div className="w-10 h-10 rounded-full bg-gradient flex items-center justify-center mr-4 shrink-0">
-                                        <FiMapPin className="w-5 h-5" />
+                                <div className="space-y-6">
+                                    <div className="flex items-start">
+                                        <div className="w-10 h-10 rounded-full bg-gradient flex items-center justify-center mr-4 shrink-0">
+                                            <FiMapPin className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-medium mb-1">Location</h4>
+                                            <p className="text-gray-400">{LOCATION}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 className="font-medium mb-1">Location</h4>
-                                        <p className="text-gray-400">{LOCATION}</p>
+
+                                    <div className="flex items-start">
+                                        <div className="w-10 h-10 rounded-full bg-gradient flex items-center justify-center mr-4 shrink-0">
+                                            <FiMail className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-medium mb-1">Email</h4>
+                                            <a href={`mailto:${EMAIL}`} className="text-gray-400 hover:text-white">{EMAIL}</a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start">
-                                    <div className="w-10 h-10 rounded-full bg-gradient flex items-center justify-center mr-4 shrink-0">
-                                        <FiMail className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-medium mb-1">Email</h4>
-                                        <a href={`mailto:${EMAIL}`} className="text-gray-400 hover:text-white">{EMAIL}</a>
+                                <div className="mt-8">
+                                    <h4 className="font-medium mb-4">Follow Me</h4>
+                                    <div className="flex space-x-3">
+                                        <a href={GITHUB} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
+                                            <FiGithub />
+                                        </a>
+                                        <a href={LINKEDIN} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
+                                            <FiLinkedin />
+                                        </a>
+                                        <a href={INSTAGRAM} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
+                                            <FiInstagram />
+                                        </a>
+                                        <a href={FACEBOOK} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
+                                            <FiFacebook />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="mt-8">
-                                <h4 className="font-medium mb-4">Follow Me</h4>
-                                <div className="flex space-x-3">
-                                    <a href={GITHUB} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
-                                        <FiGithub />
-                                    </a>
-                                    <a href={LINKEDIN} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
-                                        <FiLinkedin />
-                                    </a>
-                                    <a href={INSTAGRAM} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
-                                        <FiInstagram />
-                                    </a>
-                                    <a href={FACEBOOK} target='_blank' className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center border border-gray-700 hover:bg-gray-700 transition-all">
-                                        <FiFacebook />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
