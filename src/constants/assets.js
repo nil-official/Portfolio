@@ -1,0 +1,2 @@
+export const RESUME_PDF = 'https://drive.google.com/file/d/1tLUYVWTFEWQtvjovAGwLjaY3zuT_Z3Z3/view'
+export const PROFILE_IMAGE = 'https://res.cloudinary.com/dya8ig3jg/image/upload/v1749280835/image_cnyxio.jpg'
