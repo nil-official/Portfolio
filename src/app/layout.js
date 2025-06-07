@@ -1,4 +1,5 @@
 import { Poppins } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 
 const poppins = Poppins({
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} bg-gray-900 text-gray-100`}>
+        <Analytics />
         {children}
       </body>
     </html>
